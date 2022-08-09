@@ -1,0 +1,19 @@
+print("Welcome to the number guessing game!")
+import random 
+number = random.randint(1,10)
+attempt = 5 
+while attempt >= 0 :
+    print("All the best")
+    input_user = int(input("please enter your number : "))
+    if input_user == number :
+        print('Congratulations, you have won!!')
+        break
+    elif input_user > number :
+        print(f'{input_user} is greater than your number. \n Remaining attempts: {attempt}.')
+        attempt -= 1 
+    elif input_user < number :
+        print(f'{input_user} is smaller than your number. \n Remaining attempts: {attempt}.')
+        attempt -= 1
+    else : 
+        print("sorry! you have not guessed it try some other time.")
+        break
